@@ -4,6 +4,13 @@ This project contains the source code for the ImaginaryRealities Common Library.
 
 * Semantic version number support
 
+Building the Common Library
+---------------------------
+In order to build the ImaginaryRealities Common Library, you will need to have the .NET Framework 4.5 installed. The ImaginaryRealities Common Library uses MSBuild to automate the process of building and packaging the common library. In order to make building the Common Library easier, we have create two command scripts that you can use to execute MSBuild for the project. The command scripts are located in the root directory of the project workspace.
+
+* **BUILD.cmd**: This script will execute MSBuild to build the Common Library. The project uses NuGet package restore, so all dependent packages will be downloaded from the NuGet repository.
+* **CLEAN.cmd**: This script will execute MSBuild to remove all build-generated files and directories from the project workspace.
+
 License
 -------
 Copyright &copy; 2013 ImaginaryRealities, LLC
