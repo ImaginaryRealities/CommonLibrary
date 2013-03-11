@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>ImaginaryRealities.CommonLibrary</id>
+    <version>1.0.0</version>
+    <title>ImaginaryRealities Common Library</title>
+    <authors>ImaginaryRealities, LLC</authors>
+    <owners>ImaginaryRealities, LLC</owners>
+    <description>The Common Library contains classes and components that are reused often by ImaginaryRealities for developing our software products.</description>
+    <releaseNotes>Initial release of the Common Library.</releaseNotes>
+    <summary>Classes and components that implement common behavior.</summary>
+    <language>en-us</language>
+    <projectUrl>http://imaginaryrealities.github.com/CommonLibrary</projectUrl>
+    <!--<iconUrl>TODO</iconurl>-->
+    <licenseUrl>http://imaginaryrealities.github.com/CommonLibrary/license.html</licenseUrl>
+    <copyright>Copyright 2013 ImaginaryRealities, LLC</copyright>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+  </metadata>
+</package>
