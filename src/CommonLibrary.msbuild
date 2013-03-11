@@ -48,7 +48,11 @@
     <BuildConfigurations Include="Release"/>
   </ItemGroup>
 
-  <Import Project="packages\ImaginaryRealities.MSBuildExtensions.1.0.0\tools\MSBuildExtensions.targets"/>
+  <UsingTask TaskName="ImaginaryRealities.MSBuild.GenerateVersionInfo"
+             AssemblyFile="packages\ImaginaryRealities.MSBuildExtensions.1.0.0\tools\ImaginaryRealities.MSBuild.dll"/>
+  
+  <UsingTask TaskName="ImaginaryRealities.MSBuild.ParseVersionNumber"
+             AssemblyFile="packages\ImaginaryRealities.MSBuildExtensions.1.0.0\tools\ImaginaryRealities.MSBuild.dll"/>
   
   <!--
   
@@ -59,6 +63,7 @@
   <PropertyGroup>
     <BuildDependsOn>
       _CreateOutputDirectories;
+      _CreateVersionNumberProperties;
       _BuildAllConfigurations
     </BuildDependsOn>
   </PropertyGroup>
@@ -74,7 +79,8 @@
     <MSBuild Projects="$(SolutionPath)"
              Targets="Clean"
              Properties="Configuration=%(BuildConfigurations.Identity)"/>
-    <RemoveDir Directories="$(OutputPath)"/>  
+    <RemoveDir Directories="$(OutputPath)"/> 
+    <RemoveDir Directories="src\packages"/> 
   </Target>
 
   <!--
@@ -90,6 +96,41 @@
   </Target>
   
   <!--
+
+  The _CreateVersionNumberProperties target will parse the semantic version
+  number for the product build and will create the properties containing the
+  .NET product and assembly version numbers for the product build.
+
+  -->
+  <Target Name="_CreateVersionNumberProperties">
+    <ParseVersionNumber VersionNumber="$(BuildVersion)">
+      <Output TaskParameter="MajorVersion" PropertyName="MajorVersion"/>
+      <Output TaskParameter="MinorVersion" PropertyName="MinorVersion"/>
+      <Output TaskParameter="PatchVersion" PropertyName="PatchVersion"/>
+      <Output TaskParameter="PrereleaseVersion" PropertyName="PrereleaseVersion"/>
+      <Output TaskParameter="BuildNumber" PropertyName="BuildNumber"/>
+    </ParseVersionNumber>
+    <CreateProperty Value="$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildNumber)">
+      <Output TaskParameter="Value" PropertyName="ProductVersion"/>
+    </CreateProperty>
+    <CreateProperty Value="$(MajorVersion).0.0.0" Condition="'$(MajorVersion)'!='0'">
+      <Output TaskParameter="Value" PropertyName="AssemblyVersion"/>
+    </CreateProperty>
+    <CreateProperty Value="1.0.0.0" Condition="'$(MajorVersion)'=='0'">
+      <Output TaskParameter="Value" PropertyName="AssemblyVersion"/>
+    </CreateProperty>
+    <CreateProperty Value="$(MajorVersion).$(MinorVersion).$(PatchVersion)" Condition="'$(PrereleaseVersion)'==''">
+      <Output TaskParameter="Value" PropertyName="NuGetPackageVersion"/>
+    </CreateProperty>
+    <CreateProperty Value="$(MajorVersion).$(MinorVersion).$(PatchVersion)-$(PrereleaseVersion)" Condition="'$(PrereleaseVersion)'!=''">
+      <Output TaskParameter="Value" PropertyName="NuGetPackageVersion"/>
+    </CreateProperty>
+    <CreateProperty Value="$(NuGetCommand) pack &quot;$(ProjectPath)&quot; -p Configuration=$(Configuration) -Version $(NuGetPackageVersion) -o &quot;$(PackageOutputDir)&quot; -symbols">
+      <Output TaskParameter="Value" PropertyName="BuildCommand"/>
+    </CreateProperty>
+  </Target>
+
+  <!--
   
   The _BuildAllConfigurations target will build all configurations of the
   ImaginaryRealities Common Library project.
@@ -98,7 +139,7 @@
   <Target Name="_BuildAllConfigurations">
     <MSBuild Projects="$(MSBuildProjectFullPath)"
              Targets="_BuildConfiguration"
-             Properties="Configuration=%(BuildConfigurations.Identity)"/>
+             Properties="Configuration=%(BuildConfigurations.Identity);ProductVersion=$(ProductVersion);AssemblyVersion=$(AssemblyVersion)"/>
   </Target>
   
   <!--
@@ -125,4 +166,8 @@
   </Target>
   
   <Import Project=".nuget\NuGet.targets"/>
+  <PropertyGroup>
+    <PackagesConfig>.nuget\packages.config</PackagesConfig>
+    <RestoreCommand>$(NuGetCommand) install "$(PackagesConfig)" -source "$(PackageSources)"  $(RequireConsentSwitch) -solutionDir "$(SolutionDir) "</RestoreCommand>
+  </PropertyGroup>    
 </Project>
