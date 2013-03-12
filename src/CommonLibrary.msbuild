@@ -149,10 +149,34 @@
   
   -->
   <PropertyGroup>
-    <BuildConfigurationDependsOn>_BuildSolution</BuildConfigurationDependsOn>
+    <BuildConfigurationDependsOn>
+      _GenerateVersionInfo;
+      _BuildSolution
+    </BuildConfigurationDependsOn>
   </PropertyGroup>
   <Target Name="_BuildConfiguration" DependsOnTargets="$(BuildConfigurationDependsOn)"/>
+
+  <!--
   
+  The _GenerateVersionInfo target will generate the VersionInfo.cs file with
+  the correct version numbers for the build configuration.
+  
+  -->
+  <PropertyGroup>
+    <ConfigurationOutputPath>$(OutputPath)\$(Configuration)</ConfigurationOutputPath>
+    <VersionInfoPath>$(ConfigurationOutputPath)\VersionInfo.cs</VersionInfoPath>
+  </PropertyGroup>
+  <Target Name="_GenerateVersionInfo">
+    <MakeDir Directories="$(ConfigurationOutputPath)"
+             Condition="!Exists('$(ConfigurationOutputPath)')"/>
+    <GenerateVersionInfo OutputPath="$(VersionInfoPath)"
+                         AssemblyConfiguration="$(Configuration)"
+                         AssemblyFileVersion="$(ProductVersion)"
+                         AssemblyInformationalVersion="$(ProductVersion)"
+                         AssemblyVersion="$(ProductVersion)"
+                         SemanticVersion="$(BuildVersion)"/>
+  </Target>
+
   <!--
   
   The _BuildSolution target will build all of the projects in the Visual
@@ -162,9 +186,9 @@
   <Target Name="_BuildSolution">
     <MSBuild Projects="$(SolutionPath)"
              Targets="Build"
-             Properties="Configuration=$(Configuration)"/>
+             Properties="Configuration=$(Configuration);VersionInfoPath=$(VersionInfoPath)"/>
   </Target>
-  
+
   <Import Project=".nuget\NuGet.targets"/>
   <PropertyGroup>
     <PackagesConfig>.nuget\packages.config</PackagesConfig>

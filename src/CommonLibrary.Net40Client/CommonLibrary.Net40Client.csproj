@@ -7,8 +7,8 @@
     <ProjectGuid>{7FCD8DC6-0F53-48D6-80E8-31D072E8D7BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ImaginaryRealities.Common</RootNamespace>
-    <AssemblyName>ImaginaryRealities.Common</AssemblyName>
+    <RootNamespace>ImaginaryRealities.Framework</RootNamespace>
+    <AssemblyName>ImaginaryRealities.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -26,7 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\ImaginaryRealities.Common.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\ImaginaryRealities.Framework.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
@@ -70,7 +70,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\ImaginaryRealities.Common.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\ImaginaryRealities.Framework.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
@@ -132,11 +132,11 @@
     <Compile Include="..\CommonLibrary.Net40\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="..\CommonLibrary.Net40\SemanticVersionAttribute.cs">
+      <Link>SemanticVersionAttribute.cs</Link>
+    </Compile>
     <Compile Include="..\CommonLibrary.Net40\SemanticVersionNumber.cs">
       <Link>SemanticVersionNumber.cs</Link>
-    </Compile>
-    <Compile Include="..\CommonLibrary.Net40\SemanticVersionNumberAttribute.cs">
-      <Link>SemanticVersionNumberAttribute.cs</Link>
     </Compile>
     <Compile Include="..\CommonLibrary.Net40\SemanticVersionNumberResources.Designer.cs">
       <Link>SemanticVersionNumberResources.Designer.cs</Link>

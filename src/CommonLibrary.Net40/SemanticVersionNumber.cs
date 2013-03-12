@@ -10,7 +10,7 @@
 // </summary>
 //-----------------------------------------------------------------------------
 
-namespace ImaginaryRealities.Common
+namespace ImaginaryRealities.Framework
 {
     using System;
     using System.Diagnostics.Contracts;

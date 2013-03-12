@@ -12,10 +12,10 @@
 
 using System.Reflection;
 
-using ImaginaryRealities.Common;
+using ImaginaryRealities.Framework;
 
 [assembly: AssemblyConfiguration("Development")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: AssemblyInformationalVersion("1.0.0.0")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: SemanticVersionNumber("1.0.0")]
+[assembly: ImaginaryRealities.Framework.SemanticVersion("1.0.0")]

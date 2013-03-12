@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ImaginaryRealities.Common {
+namespace ImaginaryRealities.Framework {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ImaginaryRealities.Common {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ImaginaryRealities.Common.SemanticVersionNumberResources", typeof(SemanticVersionNumberResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ImaginaryRealities.Framework.SemanticVersionNumberResources", typeof(SemanticVersionNumberResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
