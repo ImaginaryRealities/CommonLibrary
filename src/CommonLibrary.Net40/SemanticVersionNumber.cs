@@ -61,7 +61,7 @@ namespace ImaginaryRealities.Framework
             this.MinorVersion = int.Parse(match.Groups["minor"].Value, CultureInfo.InvariantCulture);
             this.PatchVersion = int.Parse(match.Groups["patch"].Value, CultureInfo.InvariantCulture);
             this.PrereleaseVersion = match.Groups["prerelease"].Success ? match.Groups["prerelease"].Value : null;
-            this.BuildVersion = match.Groups["build"].Success ? match.Groups["success"].Value : null;
+            this.BuildVersion = match.Groups["build"].Success ? match.Groups["build"].Value : null;
         }
 
         /// <summary>

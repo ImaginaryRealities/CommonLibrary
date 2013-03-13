@@ -53,6 +53,9 @@
   
   <UsingTask TaskName="ImaginaryRealities.MSBuild.ParseVersionNumber"
              AssemblyFile="packages\ImaginaryRealities.MSBuildExtensions.1.0.0\tools\ImaginaryRealities.MSBuild.dll"/>
+
+  <UsingTask TaskName="Xunit.Runner.MSBuild.xunit"
+             AssemblyFile="packages\xunit.runners.1.9.1\tools\xunit.runner.msbuild.dll"/>
   
   <!--
   
@@ -151,7 +154,8 @@
   <PropertyGroup>
     <BuildConfigurationDependsOn>
       _GenerateVersionInfo;
-      _BuildSolution
+      _BuildSolution;
+      _RunUnitTests
     </BuildConfigurationDependsOn>
   </PropertyGroup>
   <Target Name="_BuildConfiguration" DependsOnTargets="$(BuildConfigurationDependsOn)"/>
@@ -187,6 +191,18 @@
     <MSBuild Projects="$(SolutionPath)"
              Targets="Build"
              Properties="Configuration=$(Configuration);VersionInfoPath=$(VersionInfoPath)"/>
+  </Target>
+  
+  <!--
+  
+  The _RunUnitTests target will run the unit tests to validate that no errors
+  were introduced in the build.
+  
+  -->
+  <Target Name="_RunUnitTests">
+    <xunit Assembly="CommonLibraryUnitTests.Net40\bin\$(Configuration)\ImaginaryRealities.Framework.UnitTests.dll"/>
+    <xunit Assembly="CommonLibraryUnitTests.Net40Client\bin\$(Configuration)\ImaginaryRealities.Framework.UnitTests.dll"/>
+    <xunit Assembly="CommonLibraryUnitTests.Net45\bin\$(Configuration)\ImaginaryRealities.Framework.UnitTests.dll"/>
   </Target>
 
   <Import Project=".nuget\NuGet.targets"/>

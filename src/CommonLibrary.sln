@@ -20,6 +20,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary.Net40Client",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary.Net45", "CommonLibrary.Net45\CommonLibrary.Net45.csproj", "{A850224D-EF68-4BBE-AA8B-CFC187B0A9D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibraryUnitTests.Net40", "CommonLibraryUnitTests.Net40\CommonLibraryUnitTests.Net40.csproj", "{CF842F28-FF4F-4DAC-A540-88C79FA6B68E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibraryUnitTests.Net40Client", "CommonLibraryUnitTests.Net40Client\CommonLibraryUnitTests.Net40Client.csproj", "{95F8C006-F258-469D-A70E-39B41C0CCCF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibraryUnitTests.Net45", "CommonLibraryUnitTests.Net45\CommonLibraryUnitTests.Net45.csproj", "{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +44,18 @@ Global
 		{A850224D-EF68-4BBE-AA8B-CFC187B0A9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A850224D-EF68-4BBE-AA8B-CFC187B0A9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A850224D-EF68-4BBE-AA8B-CFC187B0A9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF842F28-FF4F-4DAC-A540-88C79FA6B68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF842F28-FF4F-4DAC-A540-88C79FA6B68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF842F28-FF4F-4DAC-A540-88C79FA6B68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF842F28-FF4F-4DAC-A540-88C79FA6B68E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F8C006-F258-469D-A70E-39B41C0CCCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F8C006-F258-469D-A70E-39B41C0CCCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F8C006-F258-469D-A70E-39B41C0CCCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F8C006-F258-469D-A70E-39B41C0CCCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
