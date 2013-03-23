@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibraryUnitTests.Net4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibraryUnitTests.Net45", "CommonLibraryUnitTests.Net45\CommonLibraryUnitTests.Net45.csproj", "{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Help", "Help\Help.shfbproj", "{E443D784-9346-4640-8C77-8A5BA77F6CFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCE9304A-7E83-4A4E-B9FD-BBB49BECA32E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E443D784-9346-4640-8C77-8A5BA77F6CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E443D784-9346-4640-8C77-8A5BA77F6CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E443D784-9346-4640-8C77-8A5BA77F6CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E443D784-9346-4640-8C77-8A5BA77F6CFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
