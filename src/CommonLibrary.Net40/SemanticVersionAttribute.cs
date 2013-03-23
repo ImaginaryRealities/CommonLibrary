@@ -34,12 +34,21 @@ namespace ImaginaryRealities.Framework
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Diagnostics.Contracts;
-    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Attribute that can be used to annotate an assembly with the semantic
     /// version number of the assembly or product.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The <b>SemanticVersionAttribute</b> class is used to annotate an
+    /// assembly with the semantic version number for a project. The presence
+    /// of a <b>SemanticVersionAttribute</b> attribute in the metadata for the
+    /// assembly will allow an application to use reflection to locate and load
+    /// the semantic version number to be displayed in a log or an about dialog
+    /// box.
+    /// </para>
+    /// </remarks>
     [SuppressMessage("Microsoft.Design", "CA1019:DefineAccessorsForAttributeArguments",
         Justification =
             "MFC3: The versionNumber parameter is converted to a SemanticVersionNumber object and exposed through the VersionNumber property.")]

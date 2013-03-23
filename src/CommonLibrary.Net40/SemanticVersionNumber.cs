@@ -41,6 +41,51 @@ namespace ImaginaryRealities.Framework
     /// <summary>
     /// Stores a semantic version number.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The <b>SemanticVersionNumber</b> class implements the
+    /// <a href="http://semver.org">Semantic Versioning</a> standard. A
+    /// semantic version number contains three required and two optional
+    /// components:
+    /// </para>
+    /// <list type="bullet">
+    /// <item>
+    /// <description>Major version number</description>
+    /// </item>
+    /// <item>
+    /// <description>Minor version number</description>
+    /// </item>
+    /// <item>
+    /// <description>Patch version number</description>
+    /// </item>
+    /// <item>
+    /// <description>Prerelease version number</description>
+    /// </item>
+    /// <item>
+    /// <description>Build version number</description>
+    /// </item>
+    /// </list>
+    /// <para>
+    /// A semantic version number typically takes the form:
+    /// <em>major.minor.patch[-prerelease][+build]</em>.
+    /// </para>
+    /// <para>
+    /// Examples of valid semantic version numbers are:
+    /// </para>
+    /// <list type="bullet">
+    /// <item><description>1.0.0</description></item>
+    /// <item><description>1.0.0-alpha</description></item>
+    /// <item><description>1.0.0+build.12</description></item>
+    /// <item><description>1.0.0-alpha+build.12</description></item>
+    /// </list>
+    /// <para>
+    /// The <strong>SemanticVersionNumber</strong> class implements full
+    /// support for comparing semantic versions based on the standard. You
+    /// can use the <strong>==</strong>, <strong>!=</strong>,
+    /// <strong>&lt;</strong>, and <strong>&gt;</strong> operators to perform
+    /// comparisons between version numbers.
+    /// </para>
+    /// </remarks>
     [Serializable]
     public sealed class SemanticVersionNumber : IComparable, IComparable<SemanticVersionNumber>,
         IEquatable<SemanticVersionNumber>

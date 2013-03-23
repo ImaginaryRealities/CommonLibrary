@@ -25,8 +25,8 @@
     </DocumentationSources>
     <HelpAttributes />
     <NamespaceSummaries>
-      <NamespaceSummaryItem name="(global)" isDocumented="False">Base components and classes that provide common core functionality and behavior for applications.</NamespaceSummaryItem>
-    </NamespaceSummaries>
+      <NamespaceSummaryItem name="(global)" isDocumented="False" />
+<NamespaceSummaryItem name="ImaginaryRealities.Framework" isDocumented="True">Base components and classes that provide common core functionality and behavior for applications.</NamespaceSummaryItem></NamespaceSummaries>
     <PlugInConfigurations />
     <BuildLogFile />
     <HtmlHelp1xCompilerPath />
@@ -47,7 +47,7 @@
     <RootNamespaceContainer>True</RootNamespaceContainer>
     <PresentationStyle>VS2010</PresentationStyle>
     <Preliminary>False</Preliminary>
-    <NamingMethod>Guid</NamingMethod>
+    <NamingMethod>MemberName</NamingMethod>
     <HelpTitle>ImaginaryRealities Common Library</HelpTitle>
     <FeedbackEMailLinkText>ImaginaryRealities Support</FeedbackEMailLinkText>
     <FeedbackEMailAddress>support%40imaginaryrealities.com</FeedbackEMailAddress>
