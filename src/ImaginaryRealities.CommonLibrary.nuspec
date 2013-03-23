@@ -16,4 +16,22 @@
     <copyright>Copyright 2013 ImaginaryRealities, LLC</copyright>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
   </metadata>
+  <files>
+    <file src="CommonLibrary.Net40\bin\Release\ImaginaryRealities.Framework.dll" target="lib\net40-full"/>
+    <file src="CommonLibrary.Net40\bin\Release\ImaginaryRealities.Framework.pdb" target="lib\net40-full"/>
+    <file src="CommonLibrary.Net40\bin\Release\ImaginaryRealities.Framework.xml" target="lib\net40-full"/>
+    <file src="CommonLibrary.Net40\bin\Release\CodeContracts\ImaginaryRealities.Framework.Contracts.dll" target="lib\net40-full\CodeContracts"/>
+    <file src="CommonLibrary.Net40\bin\Release\en-US\ImaginaryRealities.Framework.resources.dll" target="lib\net40-full\en-US"/>
+    <file src="CommonLibrary.Net40Client\bin\Release\ImaginaryRealities.Framework.dll" target="lib\net40-client"/>
+    <file src="CommonLibrary.Net40Client\bin\Release\ImaginaryRealities.Framework.pdb" target="lib\net40-client"/>
+    <file src="CommonLibrary.Net40Client\bin\Release\ImaginaryRealities.Framework.xml" target="lib\net40-client"/>
+    <file src="CommonLibrary.Net40Client\bin\Release\CodeContracts\ImaginaryRealities.Framework.Contracts.dll" target="lib\net40-client\CodeContracts"/>
+    <file src="CommonLibrary.Net40Client\bin\Release\en-US\ImaginaryRealities.Framework.resources.dll" target="lib\net40-client\en-US"/>
+    <file src="CommonLibrary.Net45\bin\Release\ImaginaryRealities.Framework.dll" target="lib\net45"/>
+    <file src="CommonLibrary.Net45\bin\Release\ImaginaryRealities.Framework.pdb" target="lib\net45"/>
+    <file src="CommonLibrary.Net45\bin\Release\ImaginaryRealities.Framework.xml" target="lib\net45"/>
+    <file src="CommonLibrary.Net45\bin\Release\CodeContracts\ImaginaryRealities.Framework.Contracts.dll" target="lib\net45\CodeContracts"/>
+    <file src="CommonLibrary.Net45\bin\Release\en-US\ImaginaryRealities.Framework.resources.dll" target="lib\net45\en-US"/>
+    <file src="CommonLibrary.Net40\*.cs" target="src"/>
+  </files>
 </package>
