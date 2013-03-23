@@ -1,0 +1,10 @@
+safe: false
+pygments: true
+lsi: false
+exclude: [README.md, Rakefile, src, lib, javascript/build.js, javascript/build.txt]
+paginate: 20
+parmalink: /blog/:year/:month/:day/:title.html
+url: http://imaginaryrealities.github.com/CommonLibrary
+
+brand: Common Library
+theme: normal

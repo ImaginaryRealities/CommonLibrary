@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="5f4e5f7e-cc18-4bdf-a7ca-a5d83a0b094c" Title="ImaginaryRealities Common Library" Url="html/d54c4288-5664-d514-577c-bd343c138132.htm">
+    <HelpTOCNode Id="7a6f2d3b-3f93-4049-adca-5313471dd786" Title="ImaginaryRealities.Framework Namespace" Url="html/9404d91e-7cec-5350-b004-344df7bfcef8.htm">
+      <HelpTOCNode Id="0768393f-a961-48ba-8593-f85e8193e845" Title="SemanticVersionAttribute Class" Url="html/0d2d80ae-3bc2-359d-5d5f-b52372df5066.htm">
+        <HelpTOCNode Title="SemanticVersionAttribute Members" Url="html/c38eaac5-2a3f-0f71-29c4-b5b1a6cfa89b.htm" />
+        <HelpTOCNode Title="SemanticVersionAttribute Constructor " Url="html/79c5c391-e3f3-820f-c9c3-4d279609c2c1.htm" />
+        <HelpTOCNode Title="SemanticVersionAttribute Methods" Url="html/4c5eee61-14f3-2986-109e-f42168fd3575.htm" />
+        <HelpTOCNode Id="b00ab93a-26fc-4171-a410-6086482f8dcc" Title="SemanticVersionAttribute Properties" Url="html/7bb77aef-7f23-3a7f-d02b-d142ac17b684.htm">
+          <HelpTOCNode Title="VersionNumber Property " Url="html/a0f94c1b-337e-dc8f-754b-276051fb3112.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1e88e22a-52fc-408b-abeb-c0f7a2882035" Title="SemanticVersionNumber Class" Url="html/2797c724-83b7-9eff-b49e-9f5770b57269.htm">
+        <HelpTOCNode Title="SemanticVersionNumber Members" Url="html/9b80bb72-1c4d-4900-2ef3-3951b0d76d4a.htm" />
+        <HelpTOCNode Id="26ef0424-eca2-4be9-9fdb-22cae8ecb8d1" Title="SemanticVersionNumber Constructor " Url="html/558529e3-b549-1c0e-e1ef-10e0f223750a.htm">
+          <HelpTOCNode Title="SemanticVersionNumber Constructor (String)" Url="html/84c4cc02-15fa-7238-2a0b-d3bec00ac9f3.htm" />
+          <HelpTOCNode Title="SemanticVersionNumber Constructor (Int32, Int32, Int32)" Url="html/6693cd6c-9085-1805-4886-cdcc3addc22c.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="c8a2ab5a-ed5c-4bf2-9311-f91894af952f" Title="SemanticVersionNumber Methods" Url="html/edf814c5-446e-9476-2aeb-317bfcdd2e16.htm">
+          <HelpTOCNode Id="88631795-33ec-4078-9333-9c8df544c2fa" Title="CompareTo Method " Url="html/f7b7309b-0067-6347-5f0a-d9717460b00b.htm">
+            <HelpTOCNode Title="CompareTo Method (Object)" Url="html/428c87ad-0816-acb6-e315-18dfefe3e9a3.htm" />
+            <HelpTOCNode Title="CompareTo Method (SemanticVersionNumber)" Url="html/881e9c33-4992-d6ce-62ef-bad7529128af.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c94a37cc-cc02-44f5-abd4-1976fbc1a846" Title="Equals Method " Url="html/5aae96d0-5aa2-12f4-d82c-abf749507664.htm">
+            <HelpTOCNode Title="Equals Method (Object)" Url="html/84738c1a-347e-1cbb-5f56-11e812fc09d4.htm" />
+            <HelpTOCNode Title="Equals Method (SemanticVersionNumber)" Url="html/cf08f6bb-fe3a-c608-d61f-dc256348449c.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetHashCode Method " Url="html/16e91438-9814-7a3a-8161-ff5f18be5cc1.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/78e436d2-0905-58c6-5f5d-2281043d4377.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="5f9c78b6-2d6a-48bc-b5eb-09411f45e9ed" Title="SemanticVersionNumber Operators" Url="html/9ff2af61-2131-adb4-0900-bad1ec83f3b9.htm">
+          <HelpTOCNode Title="Equality Operator " Url="html/91686a77-0598-d5bf-e5cb-e7326f31f0c2.htm" />
+          <HelpTOCNode Title="GreaterThan Operator " Url="html/728329d2-2207-4a45-e1e9-df78b445db5f.htm" />
+          <HelpTOCNode Title="Inequality Operator " Url="html/a1b38fd1-6e74-44b4-5806-4a442f6dba92.htm" />
+          <HelpTOCNode Title="LessThan Operator " Url="html/128d9d59-d345-27f8-56d8-55d7c1fd4ff3.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="6fd491e8-28a4-44f3-b7d2-5975b4fb6adc" Title="SemanticVersionNumber Properties" Url="html/4d199aa6-1cf9-1b38-7e47-007618cebef8.htm">
+          <HelpTOCNode Title="BuildVersion Property " Url="html/2c6cebb9-64ff-01b9-d104-6b356e4395d7.htm" />
+          <HelpTOCNode Title="MajorVersion Property " Url="html/5d47911c-ef2c-de54-eb81-4e6661a6c4a8.htm" />
+          <HelpTOCNode Title="MinorVersion Property " Url="html/a655b6cd-2a7d-0beb-7ab5-c57cf86425e3.htm" />
+          <HelpTOCNode Title="PatchVersion Property " Url="html/f79a66c3-9adc-8bed-3e44-2eaea3e0fd56.htm" />
+          <HelpTOCNode Title="PrereleaseVersion Property " Url="html/bcda9b94-8049-96a8-070a-e8b75be2f588.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
