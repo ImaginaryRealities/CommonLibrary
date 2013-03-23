@@ -61,11 +61,47 @@ namespace ImaginaryRealities.Framework {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The major version number needs to be greater than or equal to zero..
+        /// </summary>
+        internal static string InvalidMajorVersionNumber {
+            get {
+                return ResourceManager.GetString("InvalidMajorVersionNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The minor version number needs to be greater than or equal to zero..
+        /// </summary>
+        internal static string InvalidMinorVersionNumber {
+            get {
+                return ResourceManager.GetString("InvalidMinorVersionNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The patch version number needs to be greater than or equal to zero..
+        /// </summary>
+        internal static string InvalidPatchVersionNumber {
+            get {
+                return ResourceManager.GetString("InvalidPatchVersionNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The version number &quot;{0}&quot; is not a valid semantic version number..
         /// </summary>
         internal static string InvalidSemanticVersionNumber {
             get {
                 return ResourceManager.GetString("InvalidSemanticVersionNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The object is not a SemanticVersionNumber object..
+        /// </summary>
+        internal static string ObjectIsNotSemanticVersionNumber {
+            get {
+                return ResourceManager.GetString("ObjectIsNotSemanticVersionNumber", resourceCulture);
             }
         }
     }

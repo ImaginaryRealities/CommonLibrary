@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\SemanticVersionAttributeTests.cs" />
+    <Compile Include="UnitTests\SemanticVersionNumberTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\ImaginaryRealities.snk">

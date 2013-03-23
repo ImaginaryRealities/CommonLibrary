@@ -138,6 +138,9 @@
     <Compile Include="$(VersionInfoPath)">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="..\CommonLibraryUnitTests.Net40\UnitTests\SemanticVersionNumberTests.cs">
+      <Link>UnitTests\SemanticVersionNumberTests.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonLibrary.Net45\CommonLibrary.Net45.csproj">
