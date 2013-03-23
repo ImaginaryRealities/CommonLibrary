@@ -1,58 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
 
-  <HelpKINode Title="BuildVersion property" Url="html/2c6cebb9-64ff-01b9-d104-6b356e4395d7.htm" />
-  <HelpKINode Title="CompareTo method" Url="html/f7b7309b-0067-6347-5f0a-d9717460b00b.htm" />
-  <HelpKINode Title="Equality operator" Url="html/91686a77-0598-d5bf-e5cb-e7326f31f0c2.htm" />
-  <HelpKINode Title="Equals method" Url="html/5aae96d0-5aa2-12f4-d82c-abf749507664.htm" />
-  <HelpKINode Title="GetHashCode method" Url="html/16e91438-9814-7a3a-8161-ff5f18be5cc1.htm" />
-  <HelpKINode Title="GreaterThan operator" Url="html/728329d2-2207-4a45-e1e9-df78b445db5f.htm" />
-  <HelpKINode Title="ImaginaryRealities.Framework namespace" Url="html/9404d91e-7cec-5350-b004-344df7bfcef8.htm" />
-  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionAttribute class" Url="html/0d2d80ae-3bc2-359d-5d5f-b52372df5066.htm" />
-  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionAttribute class" Url="html/c38eaac5-2a3f-0f71-29c4-b5b1a6cfa89b.htm" />
-  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionNumber class" Url="html/2797c724-83b7-9eff-b49e-9f5770b57269.htm" />
-  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionNumber class" Url="html/9b80bb72-1c4d-4900-2ef3-3951b0d76d4a.htm" />
-  <HelpKINode Title="Inequality operator" Url="html/a1b38fd1-6e74-44b4-5806-4a442f6dba92.htm" />
-  <HelpKINode Title="LessThan operator" Url="html/128d9d59-d345-27f8-56d8-55d7c1fd4ff3.htm" />
-  <HelpKINode Title="MajorVersion property" Url="html/5d47911c-ef2c-de54-eb81-4e6661a6c4a8.htm" />
-  <HelpKINode Title="MinorVersion property" Url="html/a655b6cd-2a7d-0beb-7ab5-c57cf86425e3.htm" />
-  <HelpKINode Title="PatchVersion property" Url="html/f79a66c3-9adc-8bed-3e44-2eaea3e0fd56.htm" />
-  <HelpKINode Title="PrereleaseVersion property" Url="html/bcda9b94-8049-96a8-070a-e8b75be2f588.htm" />
-  <HelpKINode Title="SemanticVersionAttribute class" Url="html/0d2d80ae-3bc2-359d-5d5f-b52372df5066.htm" />
-  <HelpKINode Title="SemanticVersionAttribute class" Url="html/c38eaac5-2a3f-0f71-29c4-b5b1a6cfa89b.htm" />
+  <HelpKINode Title="BuildVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_BuildVersion.htm" />
+  <HelpKINode Title="CompareTo method" Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber_CompareTo.htm" />
+  <HelpKINode Title="Equality operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_Equality.htm" />
+  <HelpKINode Title="Equals method" Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber_Equals.htm" />
+  <HelpKINode Title="GetHashCode method" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_GetHashCode.htm" />
+  <HelpKINode Title="GreaterThan operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_GreaterThan.htm" />
+  <HelpKINode Title="ImaginaryRealities.Framework namespace" Url="html/N_ImaginaryRealities_Framework.htm" />
+  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionAttribute class" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionAttribute class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionNumber class" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+  <HelpKINode Title="ImaginaryRealities.Framework.SemanticVersionNumber class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+  <HelpKINode Title="Inequality operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_Inequality.htm" />
+  <HelpKINode Title="LessThan operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_LessThan.htm" />
+  <HelpKINode Title="MajorVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_MajorVersion.htm" />
+  <HelpKINode Title="MinorVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_MinorVersion.htm" />
+  <HelpKINode Title="PatchVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_PatchVersion.htm" />
+  <HelpKINode Title="PrereleaseVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_PrereleaseVersion.htm" />
+  <HelpKINode Title="SemanticVersionAttribute class" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+  <HelpKINode Title="SemanticVersionAttribute class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
   <HelpKINode Title="SemanticVersionAttribute class">
-    <HelpKINode Title="about SemanticVersionAttribute class" Url="html/0d2d80ae-3bc2-359d-5d5f-b52372df5066.htm" />
-    <HelpKINode Title="all members" Url="html/c38eaac5-2a3f-0f71-29c4-b5b1a6cfa89b.htm" />
-    <HelpKINode Title="constructor" Url="html/79c5c391-e3f3-820f-c9c3-4d279609c2c1.htm" />
-    <HelpKINode Title="methods" Url="html/4c5eee61-14f3-2986-109e-f42168fd3575.htm" />
-    <HelpKINode Title="properties" Url="html/7bb77aef-7f23-3a7f-d02b-d142ac17b684.htm" />
+    <HelpKINode Title="about SemanticVersionAttribute class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ImaginaryRealities_Framework_SemanticVersionAttribute__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
   </HelpKINode>
-  <HelpKINode Title="SemanticVersionAttribute.SemanticVersionAttribute constructor" Url="html/79c5c391-e3f3-820f-c9c3-4d279609c2c1.htm" />
-  <HelpKINode Title="SemanticVersionAttribute.VersionNumber property" Url="html/a0f94c1b-337e-dc8f-754b-276051fb3112.htm" />
-  <HelpKINode Title="SemanticVersionNumber class" Url="html/2797c724-83b7-9eff-b49e-9f5770b57269.htm" />
-  <HelpKINode Title="SemanticVersionNumber class" Url="html/9b80bb72-1c4d-4900-2ef3-3951b0d76d4a.htm" />
+  <HelpKINode Title="SemanticVersionAttribute.SemanticVersionAttribute constructor" Url="html/M_ImaginaryRealities_Framework_SemanticVersionAttribute__ctor.htm" />
+  <HelpKINode Title="SemanticVersionAttribute.VersionNumber property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionAttribute_VersionNumber.htm" />
+  <HelpKINode Title="SemanticVersionNumber class" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+  <HelpKINode Title="SemanticVersionNumber class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
   <HelpKINode Title="SemanticVersionNumber class">
-    <HelpKINode Title="about SemanticVersionNumber class" Url="html/2797c724-83b7-9eff-b49e-9f5770b57269.htm" />
-    <HelpKINode Title="all members" Url="html/9b80bb72-1c4d-4900-2ef3-3951b0d76d4a.htm" />
-    <HelpKINode Title="constructor" Url="html/558529e3-b549-1c0e-e1ef-10e0f223750a.htm" />
-    <HelpKINode Title="methods" Url="html/edf814c5-446e-9476-2aeb-317bfcdd2e16.htm" />
-    <HelpKINode Title="operators" Url="html/9ff2af61-2131-adb4-0900-bad1ec83f3b9.htm" />
-    <HelpKINode Title="properties" Url="html/4d199aa6-1cf9-1b38-7e47-007618cebef8.htm" />
+    <HelpKINode Title="about SemanticVersionNumber class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+    <HelpKINode Title="operators" Url="html/Operators_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
   </HelpKINode>
-  <HelpKINode Title="SemanticVersionNumber.BuildVersion property" Url="html/2c6cebb9-64ff-01b9-d104-6b356e4395d7.htm" />
-  <HelpKINode Title="SemanticVersionNumber.CompareTo method" Url="html/f7b7309b-0067-6347-5f0a-d9717460b00b.htm" />
-  <HelpKINode Title="SemanticVersionNumber.Equality operator" Url="html/91686a77-0598-d5bf-e5cb-e7326f31f0c2.htm" />
-  <HelpKINode Title="SemanticVersionNumber.Equals method" Url="html/5aae96d0-5aa2-12f4-d82c-abf749507664.htm" />
-  <HelpKINode Title="SemanticVersionNumber.GetHashCode method" Url="html/16e91438-9814-7a3a-8161-ff5f18be5cc1.htm" />
-  <HelpKINode Title="SemanticVersionNumber.GreaterThan operator" Url="html/728329d2-2207-4a45-e1e9-df78b445db5f.htm" />
-  <HelpKINode Title="SemanticVersionNumber.Inequality operator" Url="html/a1b38fd1-6e74-44b4-5806-4a442f6dba92.htm" />
-  <HelpKINode Title="SemanticVersionNumber.LessThan operator" Url="html/128d9d59-d345-27f8-56d8-55d7c1fd4ff3.htm" />
-  <HelpKINode Title="SemanticVersionNumber.MajorVersion property" Url="html/5d47911c-ef2c-de54-eb81-4e6661a6c4a8.htm" />
-  <HelpKINode Title="SemanticVersionNumber.MinorVersion property" Url="html/a655b6cd-2a7d-0beb-7ab5-c57cf86425e3.htm" />
-  <HelpKINode Title="SemanticVersionNumber.PatchVersion property" Url="html/f79a66c3-9adc-8bed-3e44-2eaea3e0fd56.htm" />
-  <HelpKINode Title="SemanticVersionNumber.PrereleaseVersion property" Url="html/bcda9b94-8049-96a8-070a-e8b75be2f588.htm" />
-  <HelpKINode Title="SemanticVersionNumber.SemanticVersionNumber constructor" Url="html/558529e3-b549-1c0e-e1ef-10e0f223750a.htm" />
-  <HelpKINode Title="SemanticVersionNumber.ToString method" Url="html/78e436d2-0905-58c6-5f5d-2281043d4377.htm" />
-  <HelpKINode Title="ToString method" Url="html/78e436d2-0905-58c6-5f5d-2281043d4377.htm" />
-  <HelpKINode Title="VersionNumber property" Url="html/a0f94c1b-337e-dc8f-754b-276051fb3112.htm" />
+  <HelpKINode Title="SemanticVersionNumber.BuildVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_BuildVersion.htm" />
+  <HelpKINode Title="SemanticVersionNumber.CompareTo method" Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber_CompareTo.htm" />
+  <HelpKINode Title="SemanticVersionNumber.Equality operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_Equality.htm" />
+  <HelpKINode Title="SemanticVersionNumber.Equals method" Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber_Equals.htm" />
+  <HelpKINode Title="SemanticVersionNumber.GetHashCode method" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_GetHashCode.htm" />
+  <HelpKINode Title="SemanticVersionNumber.GreaterThan operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_GreaterThan.htm" />
+  <HelpKINode Title="SemanticVersionNumber.Inequality operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_Inequality.htm" />
+  <HelpKINode Title="SemanticVersionNumber.LessThan operator" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_LessThan.htm" />
+  <HelpKINode Title="SemanticVersionNumber.MajorVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_MajorVersion.htm" />
+  <HelpKINode Title="SemanticVersionNumber.MinorVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_MinorVersion.htm" />
+  <HelpKINode Title="SemanticVersionNumber.PatchVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_PatchVersion.htm" />
+  <HelpKINode Title="SemanticVersionNumber.PrereleaseVersion property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_PrereleaseVersion.htm" />
+  <HelpKINode Title="SemanticVersionNumber.SemanticVersionNumber constructor" Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber__ctor.htm" />
+  <HelpKINode Title="SemanticVersionNumber.ToString method" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_ToString.htm" />
+  <HelpKINode Title="VersionNumber property" Url="html/P_ImaginaryRealities_Framework_SemanticVersionAttribute_VersionNumber.htm" />
 </HelpKI>

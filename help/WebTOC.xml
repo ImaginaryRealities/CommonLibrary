@@ -1,46 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="05430a81-0240-46e7-bbc6-9d5da8ca9099" Title="ImaginaryRealities Common Library" Url="html/d54c4288-5664-d514-577c-bd343c138132.htm">
-    <HelpTOCNode Id="a087f1a2-c73a-4210-b9f8-54a37f6c8ff9" Title="ImaginaryRealities.Framework Namespace" Url="html/9404d91e-7cec-5350-b004-344df7bfcef8.htm">
-      <HelpTOCNode Id="c80dd55c-d0ac-4845-bb55-4330b736bfc5" Title="SemanticVersionAttribute Class" Url="html/0d2d80ae-3bc2-359d-5d5f-b52372df5066.htm">
-        <HelpTOCNode Title="SemanticVersionAttribute Members" Url="html/c38eaac5-2a3f-0f71-29c4-b5b1a6cfa89b.htm" />
-        <HelpTOCNode Title="SemanticVersionAttribute Constructor " Url="html/79c5c391-e3f3-820f-c9c3-4d279609c2c1.htm" />
-        <HelpTOCNode Title="SemanticVersionAttribute Methods" Url="html/4c5eee61-14f3-2986-109e-f42168fd3575.htm" />
-        <HelpTOCNode Id="0c388a2b-7a1b-4add-b9a7-64e0788f7458" Title="SemanticVersionAttribute Properties" Url="html/7bb77aef-7f23-3a7f-d02b-d142ac17b684.htm">
-          <HelpTOCNode Title="VersionNumber Property " Url="html/a0f94c1b-337e-dc8f-754b-276051fb3112.htm" />
+  <HelpTOCNode Id="47cd216a-a545-4f79-ab4b-8011fc5fb70b" Title="ImaginaryRealities Common Library" Url="html/R_Project_CommonLibrary.htm">
+    <HelpTOCNode Id="383e9d85-9d94-4fc0-b3fb-3e27f6b11581" Title="ImaginaryRealities.Framework Namespace" Url="html/N_ImaginaryRealities_Framework.htm">
+      <HelpTOCNode Id="3a20a2d6-26fa-425f-a757-e507a7c36533" Title="SemanticVersionAttribute Class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm">
+        <HelpTOCNode Title="SemanticVersionAttribute Members" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+        <HelpTOCNode Title="SemanticVersionAttribute Constructor " Url="html/M_ImaginaryRealities_Framework_SemanticVersionAttribute__ctor.htm" />
+        <HelpTOCNode Title="SemanticVersionAttribute Methods" Url="html/Methods_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm" />
+        <HelpTOCNode Id="dedb71fc-995d-4282-87ea-a013e458c189" Title="SemanticVersionAttribute Properties" Url="html/Properties_T_ImaginaryRealities_Framework_SemanticVersionAttribute.htm">
+          <HelpTOCNode Title="VersionNumber Property " Url="html/P_ImaginaryRealities_Framework_SemanticVersionAttribute_VersionNumber.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="95786083-ffa4-4042-bc8e-288fcae3c064" Title="SemanticVersionNumber Class" Url="html/2797c724-83b7-9eff-b49e-9f5770b57269.htm">
-        <HelpTOCNode Title="SemanticVersionNumber Members" Url="html/9b80bb72-1c4d-4900-2ef3-3951b0d76d4a.htm" />
-        <HelpTOCNode Id="c3a76c6a-ad21-412e-bd7e-ee4ce9c5b838" Title="SemanticVersionNumber Constructor " Url="html/558529e3-b549-1c0e-e1ef-10e0f223750a.htm">
-          <HelpTOCNode Title="SemanticVersionNumber Constructor (String)" Url="html/84c4cc02-15fa-7238-2a0b-d3bec00ac9f3.htm" />
-          <HelpTOCNode Title="SemanticVersionNumber Constructor (Int32, Int32, Int32)" Url="html/6693cd6c-9085-1805-4886-cdcc3addc22c.htm" />
+      <HelpTOCNode Id="64616aa5-8d71-46b8-bc31-72aa79c0e714" Title="SemanticVersionNumber Class" Url="html/T_ImaginaryRealities_Framework_SemanticVersionNumber.htm">
+        <HelpTOCNode Title="SemanticVersionNumber Members" Url="html/AllMembers_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm" />
+        <HelpTOCNode Id="c442a973-7561-4026-b685-13734ee466bb" Title="SemanticVersionNumber Constructor " Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber__ctor.htm">
+          <HelpTOCNode Title="SemanticVersionNumber Constructor (String)" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber__ctor_1.htm" />
+          <HelpTOCNode Title="SemanticVersionNumber Constructor (Int32, Int32, Int32)" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber__ctor.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="1d72da47-1b14-49e3-9cb0-0d98666cbfd1" Title="SemanticVersionNumber Methods" Url="html/edf814c5-446e-9476-2aeb-317bfcdd2e16.htm">
-          <HelpTOCNode Id="e1fd0390-f0b5-40de-b82b-d1bc8e87cb26" Title="CompareTo Method " Url="html/f7b7309b-0067-6347-5f0a-d9717460b00b.htm">
-            <HelpTOCNode Title="CompareTo Method (Object)" Url="html/428c87ad-0816-acb6-e315-18dfefe3e9a3.htm" />
-            <HelpTOCNode Title="CompareTo Method (SemanticVersionNumber)" Url="html/881e9c33-4992-d6ce-62ef-bad7529128af.htm" />
+        <HelpTOCNode Id="b621a495-e4c4-4023-940f-bcd2ba0e7291" Title="SemanticVersionNumber Methods" Url="html/Methods_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm">
+          <HelpTOCNode Id="8799d4d3-2622-403b-b76c-d273195344a9" Title="CompareTo Method " Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber_CompareTo.htm">
+            <HelpTOCNode Title="CompareTo Method (Object)" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_CompareTo_1.htm" />
+            <HelpTOCNode Title="CompareTo Method (SemanticVersionNumber)" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_CompareTo.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Id="2527447b-b02e-4fe1-8fac-f71a7e8b7a1a" Title="Equals Method " Url="html/5aae96d0-5aa2-12f4-d82c-abf749507664.htm">
-            <HelpTOCNode Title="Equals Method (Object)" Url="html/84738c1a-347e-1cbb-5f56-11e812fc09d4.htm" />
-            <HelpTOCNode Title="Equals Method (SemanticVersionNumber)" Url="html/cf08f6bb-fe3a-c608-d61f-dc256348449c.htm" />
+          <HelpTOCNode Id="f3ece16d-dd1f-488f-9d99-43d4ab99236c" Title="Equals Method " Url="html/Overload_ImaginaryRealities_Framework_SemanticVersionNumber_Equals.htm">
+            <HelpTOCNode Title="Equals Method (Object)" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_Equals_1.htm" />
+            <HelpTOCNode Title="Equals Method (SemanticVersionNumber)" Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_Equals.htm" />
           </HelpTOCNode>
-          <HelpTOCNode Title="GetHashCode Method " Url="html/16e91438-9814-7a3a-8161-ff5f18be5cc1.htm" />
-          <HelpTOCNode Title="ToString Method " Url="html/78e436d2-0905-58c6-5f5d-2281043d4377.htm" />
+          <HelpTOCNode Title="GetHashCode Method " Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_GetHashCode.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_ToString.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="2eb0c740-16ea-441a-ad43-b87e8ec212e4" Title="SemanticVersionNumber Operators" Url="html/9ff2af61-2131-adb4-0900-bad1ec83f3b9.htm">
-          <HelpTOCNode Title="Equality Operator " Url="html/91686a77-0598-d5bf-e5cb-e7326f31f0c2.htm" />
-          <HelpTOCNode Title="GreaterThan Operator " Url="html/728329d2-2207-4a45-e1e9-df78b445db5f.htm" />
-          <HelpTOCNode Title="Inequality Operator " Url="html/a1b38fd1-6e74-44b4-5806-4a442f6dba92.htm" />
-          <HelpTOCNode Title="LessThan Operator " Url="html/128d9d59-d345-27f8-56d8-55d7c1fd4ff3.htm" />
+        <HelpTOCNode Id="d5ecca11-2b52-45e2-9e47-1f3ac17e7905" Title="SemanticVersionNumber Operators" Url="html/Operators_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm">
+          <HelpTOCNode Title="Equality Operator " Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_Equality.htm" />
+          <HelpTOCNode Title="GreaterThan Operator " Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_GreaterThan.htm" />
+          <HelpTOCNode Title="Inequality Operator " Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_Inequality.htm" />
+          <HelpTOCNode Title="LessThan Operator " Url="html/M_ImaginaryRealities_Framework_SemanticVersionNumber_op_LessThan.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="86c8c0ae-1d74-4c15-9373-fafea5ab4cc0" Title="SemanticVersionNumber Properties" Url="html/4d199aa6-1cf9-1b38-7e47-007618cebef8.htm">
-          <HelpTOCNode Title="BuildVersion Property " Url="html/2c6cebb9-64ff-01b9-d104-6b356e4395d7.htm" />
-          <HelpTOCNode Title="MajorVersion Property " Url="html/5d47911c-ef2c-de54-eb81-4e6661a6c4a8.htm" />
-          <HelpTOCNode Title="MinorVersion Property " Url="html/a655b6cd-2a7d-0beb-7ab5-c57cf86425e3.htm" />
-          <HelpTOCNode Title="PatchVersion Property " Url="html/f79a66c3-9adc-8bed-3e44-2eaea3e0fd56.htm" />
-          <HelpTOCNode Title="PrereleaseVersion Property " Url="html/bcda9b94-8049-96a8-070a-e8b75be2f588.htm" />
+        <HelpTOCNode Id="0fee2788-3324-44a4-b5c1-8c09eefdaf36" Title="SemanticVersionNumber Properties" Url="html/Properties_T_ImaginaryRealities_Framework_SemanticVersionNumber.htm">
+          <HelpTOCNode Title="BuildVersion Property " Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_BuildVersion.htm" />
+          <HelpTOCNode Title="MajorVersion Property " Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_MajorVersion.htm" />
+          <HelpTOCNode Title="MinorVersion Property " Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_MinorVersion.htm" />
+          <HelpTOCNode Title="PatchVersion Property " Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_PatchVersion.htm" />
+          <HelpTOCNode Title="PrereleaseVersion Property " Url="html/P_ImaginaryRealities_Framework_SemanticVersionNumber_PrereleaseVersion.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
