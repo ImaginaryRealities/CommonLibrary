@@ -29,6 +29,7 @@
 using System;
 using System.Reflection;
 using System.Resources;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Common Library")]
@@ -42,3 +43,4 @@ using System.Runtime.InteropServices;
 [assembly: Guid("ed1e1929-ca8e-4952-97ed-0247697e7fbd")]
 [assembly: NeutralResourcesLanguageAttribute("en-US", UltimateResourceFallbackLocation.Satellite)]
 [assembly: CLSCompliant(true)]
+[assembly: InternalsVisibleTo("ImaginaryRealities.Framework.UnitTests, PublicKey=002400000480000094000000060200000024000052534131000400000100010087e37d482f64db318a30188b7ee1d90f4814c047162f35a66ba1faa5ca5e9232a814bd2dc9c1003ee9496b9d2a3ad132812737f1bfb11f2007b31ebd59b3c79b6405e3ffe11b2ffb7b1e91c438bf8319ebccc260ea8ce0e8d184d2c65633228d42bf3288b21b68aa0d5b84c0b77443e019f29040bcd05de639bff9909fb11ac5")]

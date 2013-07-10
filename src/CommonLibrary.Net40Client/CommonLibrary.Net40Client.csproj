@@ -129,6 +129,24 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\IProcessMonitor.cs">
+      <Link>Diagnostics\IProcessMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\IWindowsApi.cs">
+      <Link>Diagnostics\IWindowsApi.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\NativeMethods.cs">
+      <Link>Diagnostics\NativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\ProcessMonitor.cs">
+      <Link>Diagnostics\ProcessMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\ProcessMonitorTraceListener.cs">
+      <Link>Diagnostics\ProcessMonitorTraceListener.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\WindowsApiWrapper.cs">
+      <Link>Diagnostics\WindowsApiWrapper.cs</Link>
+    </Compile>
     <Compile Include="..\CommonLibrary.Net40\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>

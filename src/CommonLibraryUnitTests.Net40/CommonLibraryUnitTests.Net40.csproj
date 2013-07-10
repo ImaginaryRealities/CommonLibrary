@@ -116,6 +116,9 @@
     <AssemblyOriginatorKeyFile>..\ImaginaryRealities.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -131,6 +134,8 @@
     <Compile Include="$(VersionInfoPath)">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Diagnostics\UnitTests\ProcessMonitorTests.cs" />
+    <Compile Include="Diagnostics\UnitTests\ProcessMonitorTraceListenerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\SemanticVersionAttributeTests.cs" />
     <Compile Include="UnitTests\SemanticVersionNumberTests.cs" />
@@ -147,6 +152,7 @@
       <Name>CommonLibrary.Net40</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

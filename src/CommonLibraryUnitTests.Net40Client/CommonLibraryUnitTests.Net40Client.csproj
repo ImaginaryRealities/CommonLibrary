@@ -16,7 +16,8 @@
     <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
     <VersionInfoPath>..\VersionInfo.cs</VersionInfoPath>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,6 +113,9 @@
     <AssemblyOriginatorKeyFile>..\ImaginaryRealities.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -130,6 +134,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonLibraryUnitTests.Net40\Diagnostics\UnitTests\ProcessMonitorTests.cs">
+      <Link>Diagnostics\UnitTests\ProcessMonitorTests.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonLibraryUnitTests.Net40\Diagnostics\UnitTests\ProcessMonitorTraceListenerTests.cs">
+      <Link>Diagnostics\UnitTests\ProcessMonitorTraceListenerTests.cs</Link>
+    </Compile>
     <Compile Include="..\CommonLibraryUnitTests.Net40\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>

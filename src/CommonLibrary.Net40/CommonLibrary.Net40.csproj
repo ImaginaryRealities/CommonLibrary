@@ -60,6 +60,7 @@
     <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
     <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
     <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -123,6 +124,12 @@
     <Compile Include="$(VersionInfoPath)">
       <Link>Properties\VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Diagnostics\IProcessMonitor.cs" />
+    <Compile Include="Diagnostics\IWindowsApi.cs" />
+    <Compile Include="Diagnostics\NativeMethods.cs" />
+    <Compile Include="Diagnostics\ProcessMonitor.cs" />
+    <Compile Include="Diagnostics\ProcessMonitorTraceListener.cs" />
+    <Compile Include="Diagnostics\WindowsApiWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SemanticVersionNumber.cs" />
     <Compile Include="SemanticVersionAttribute.cs" />
@@ -145,6 +152,7 @@
       <LastGenOutput>SemanticVersionNumberResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

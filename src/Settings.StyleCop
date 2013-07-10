@@ -39,10 +39,15 @@
         </Rule>
         <Rule Name="FileHeaderMustHaveSummary">
           <RuleSettings>
-            <BooleanProperty Name="Enabled">True</BooleanProperty>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
           </RuleSettings>
         </Rule>
-      </Rules>
+        <Rule Name="ElementsMustBeDocumented">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+       </Rules>
       <AnalyzerSettings>
         <StringProperty Name="CompanyName">ImaginaryRealities</StringProperty>
         <StringProperty Name="Copyright">Copyright 2013 ImaginaryRealities, LLC</StringProperty>
