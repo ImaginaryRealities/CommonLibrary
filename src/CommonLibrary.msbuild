@@ -78,7 +78,7 @@
   <Target Name="Clean">
     <MSBuild Projects="$(SolutionPath)"
              Targets="Clean"
-             Properties="Configuration=%(BuildConfigurations.Identity)"/>
+             Properties="Configuration=%(BuildConfigurations.Identity);Platform=Any CPU"/>
     <RemoveDir Directories="$(OutputPath)"/> 
     <RemoveDir Directories="src\packages"/> 
   </Target>
