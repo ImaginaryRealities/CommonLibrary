@@ -102,7 +102,7 @@ namespace ImaginaryRealities.Framework
         /// </summary>
         private static readonly Regex SemanticVersionRegex =
             new Regex(
-                @"^(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)(-(?<prerelease>[A-Za-z0-9\.\-]+))?(\+(?<build>[A-Za-z0-9\.\-]+))?$",
+                @"^(?<major>\d*)\.(?<minor>\d*)\.(?<patch>\d*)(-(?<prerelease>([A-Za-z][A-Za-z0-9\-]*|[1-9]\d*)(\.([A-Za-z][A-Za-z0-9\-]*|[1-9]\d*))*))?(\+(?<build>[0-9A-Za-z\-]+(\.[0-9A-Za-z\-]+)*))?$",
                 RegexOptions.Singleline | RegexOptions.Compiled);
 
         /// <summary>
@@ -122,9 +122,9 @@ namespace ImaginaryRealities.Framework
             Contract.Requires<ArgumentException>(0 <= major, SemanticVersionNumberResources.InvalidMajorVersionNumber);
             Contract.Requires<ArgumentException>(0 <= minor, SemanticVersionNumberResources.InvalidMinorVersionNumber);
             Contract.Requires<ArgumentException>(0 <= patch, SemanticVersionNumberResources.InvalidPatchVersionNumber);
-            Contract.Ensures(0 <= major);
-            Contract.Ensures(0 <= minor);
-            Contract.Ensures(0 <= patch);
+            Contract.Ensures(0 <= this.MajorVersion);
+            Contract.Ensures(0 <= this.MinorVersion);
+            Contract.Ensures(0 <= this.PatchVersion);
             this.MajorVersion = major;
             this.MinorVersion = minor;
             this.PatchVersion = patch;
@@ -339,24 +339,24 @@ namespace ImaginaryRealities.Framework
             }
 
             var result = this.MajorVersion.CompareTo(other.MajorVersion);
-            if (0 == result)
+            if (0 != result)
             {
-                result = this.MinorVersion.CompareTo(other.MinorVersion);
-                if (0 == result)
-                {
-                    result = this.PatchVersion.CompareTo(other.PatchVersion);
-                    if (0 == result)
-                    {
-                        result = ComparePrereleaseVersions(this.PrereleaseVersion, other.PrereleaseVersion);
-                        if (0 == result)
-                        {
-                            result = CompareBuildVersions(this.BuildVersion, other.BuildVersion);
-                        }
-                    }
-                }
+                return result;
             }
 
-            return result;
+            result = this.MinorVersion.CompareTo(other.MinorVersion);
+            if (0 != result)
+            {
+                return result;
+            }
+
+            result = this.PatchVersion.CompareTo(other.PatchVersion);
+            if (0 != result)
+            {
+                return result;
+            }
+
+            return ComparePrereleaseVersions(this.PrereleaseVersion, other.PrereleaseVersion);
         }
 
         /// <summary>
@@ -464,79 +464,6 @@ namespace ImaginaryRealities.Framework
         }
 
         /// <summary>
-        /// Compares two build version numbers.
-        /// </summary>
-        /// <param name="identifier1">
-        /// The first build version number.
-        /// </param>
-        /// <param name="identifier2">
-        /// The second build version number.
-        /// </param>
-        /// <returns>
-        /// <b>-1</b> if <paramref name="identifier1"/> is less than
-        /// <paramref name="identifier2"/>, <b>0</b> if the version numbers are
-        /// equal, or <b>1</b> if <paramref name="identifier1"/> is greater
-        /// than <paramref name="identifier2"/>.
-        /// </returns>
-        private static int CompareBuildVersions(string identifier1, string identifier2)
-        {
-            var result = 0;
-            var hasIdentifier1 = !string.IsNullOrEmpty(identifier1);
-            var hasIdentifier2 = !string.IsNullOrEmpty(identifier2);
-            if (hasIdentifier1 && !hasIdentifier2)
-            {
-                return 1;
-            }
-
-            if (!hasIdentifier1 && hasIdentifier2)
-            {
-                return -1;
-            }
-
-            if (hasIdentifier1)
-            {
-                var dotDelimiter = new[] { '.' };
-                var parts1 = identifier1.Split(dotDelimiter, StringSplitOptions.RemoveEmptyEntries);
-                var parts2 = identifier2.Split(dotDelimiter, StringSplitOptions.RemoveEmptyEntries);
-                var max = Math.Max(parts1.Length, parts2.Length);
-                for (var i = 0; i < max; i++)
-                {
-                    if (i == parts1.Length && i != parts2.Length)
-                    {
-                        result = -1;
-                        break;
-                    }
-
-                    if (i != parts1.Length && i == parts2.Length)
-                    {
-                        result = 1;
-                        break;
-                    }
-
-                    var part1 = parts1[i];
-                    var part2 = parts2[i];
-                    if (AllDigitsRegex.IsMatch(part1) && AllDigitsRegex.IsMatch(part2))
-                    {
-                        var value1 = int.Parse(part1, CultureInfo.InvariantCulture);
-                        var value2 = int.Parse(part2, CultureInfo.InvariantCulture);
-                        result = value1.CompareTo(value2);
-                    }
-                    else
-                    {
-                        result = string.Compare(part1, part2, StringComparison.Ordinal);
-                    }
-
-                    if (0 != result)
-                    {
-                        break;
-                    }
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
         /// Compares two prerelease version numbers.
         /// </summary>
         /// <param name="identifier1">
@@ -566,43 +493,55 @@ namespace ImaginaryRealities.Framework
                 return 1;
             }
 
-            if (hasIdentifier1)
+            if (!hasIdentifier1)
             {
-                var dotDelimiter = new[] { '.' };
-                var parts1 = identifier1.Split(dotDelimiter, StringSplitOptions.RemoveEmptyEntries);
-                var parts2 = identifier2.Split(dotDelimiter, StringSplitOptions.RemoveEmptyEntries);
-                var max = Math.Max(parts1.Length, parts2.Length);
-                for (var i = 0; i < max; i++)
+                return result;
+            }
+
+            var dotDelimiter = new[] { '.' };
+            var parts1 = identifier1.Split(dotDelimiter, StringSplitOptions.RemoveEmptyEntries);
+            var parts2 = identifier2.Split(dotDelimiter, StringSplitOptions.RemoveEmptyEntries);
+            var max = Math.Max(parts1.Length, parts2.Length);
+            for (var i = 0; i < max; i++)
+            {
+                if (i == parts1.Length && i != parts2.Length)
                 {
-                    if (i == parts1.Length && i != parts2.Length)
-                    {
-                        result = -1;
-                        break;
-                    }
+                    result = -1;
+                    break;
+                }
 
-                    if (i != parts1.Length && i == parts2.Length)
-                    {
-                        result = 1;
-                        break;
-                    }
+                if (i != parts1.Length && i == parts2.Length)
+                {
+                    result = 1;
+                    break;
+                }
 
-                    var part1 = parts1[i];
-                    var part2 = parts2[i];
-                    if (AllDigitsRegex.IsMatch(part1) && AllDigitsRegex.IsMatch(part2))
-                    {
-                        var value1 = int.Parse(part1, CultureInfo.InvariantCulture);
-                        var value2 = int.Parse(part2, CultureInfo.InvariantCulture);
-                        result = value1.CompareTo(value2);
-                    }
-                    else
-                    {
-                        result = string.Compare(part1, part2, StringComparison.Ordinal);
-                    }
+                var part1 = parts1[i];
+                var part2 = parts2[i];
+                var isPart1Numeric = AllDigitsRegex.IsMatch(part1);
+                var isPart2Numeric = AllDigitsRegex.IsMatch(part2);
+                if (isPart1Numeric && isPart2Numeric)
+                {
+                    var value1 = int.Parse(part1, CultureInfo.InvariantCulture);
+                    var value2 = int.Parse(part2, CultureInfo.InvariantCulture);
+                    result = value1.CompareTo(value2);
+                }
+                else if (isPart1Numeric)
+                {
+                    result = -1;
+                }
+                else if (isPart2Numeric)
+                {
+                    result = 1;
+                }
+                else
+                {
+                    result = string.Compare(part1, part2, StringComparison.Ordinal);
+                }
 
-                    if (0 != result)
-                    {
-                        break;
-                    }
+                if (0 != result)
+                {
+                    break;
                 }
             }
 

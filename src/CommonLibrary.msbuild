@@ -39,7 +39,7 @@
     <BuildPackage>true</BuildPackage>
     <PackageOutputDir>$(OutputPath)\NuGet</PackageOutputDir>
     <ProjectPath>$(MSBuildProjectDirectory)\ImaginaryRealities.CommonLibrary.nuspec</ProjectPath>
-    <BuildVersion Condition="'$(BuildVersion)'==''">1.0.0</BuildVersion>
+    <BuildVersion Condition="'$(BuildVersion)'==''">2.0.1</BuildVersion>
     <Configuration>Release</Configuration>
   </PropertyGroup>
 
@@ -48,14 +48,11 @@
     <BuildConfigurations Include="Release"/>
   </ItemGroup>
 
-  <UsingTask TaskName="ImaginaryRealities.MSBuild.GenerateVersionInfo"
-             AssemblyFile="packages\ImaginaryRealities.MSBuildExtensions.1.0.0\tools\ImaginaryRealities.MSBuild.dll"/>
-  
   <UsingTask TaskName="ImaginaryRealities.MSBuild.ParseVersionNumber"
-             AssemblyFile="packages\ImaginaryRealities.MSBuildExtensions.1.0.0\tools\ImaginaryRealities.MSBuild.dll"/>
+             AssemblyFile="packages\ImaginaryRealities.MSBuildExtensions.2.0.0\tools\ImaginaryRealities.MSBuild.dll"/>
 
   <UsingTask TaskName="Xunit.Runner.MSBuild.xunit"
-             AssemblyFile="packages\xunit.runners.1.9.1\tools\xunit.runner.msbuild.dll"/>
+             AssemblyFile="packages\xunit.runners.1.9.2\tools\xunit.runner.msbuild.dll"/>
   
   <!--
   
@@ -81,7 +78,7 @@
   <Target Name="Clean">
     <MSBuild Projects="$(SolutionPath)"
              Targets="Clean"
-             Properties="Configuration=%(BuildConfigurations.Identity)"/>
+             Properties="Configuration=%(BuildConfigurations.Identity);Platform=Any CPU"/>
     <RemoveDir Directories="$(OutputPath)"/> 
     <RemoveDir Directories="src\packages"/> 
   </Target>
@@ -142,7 +139,7 @@
   <Target Name="_BuildAllConfigurations">
     <MSBuild Projects="$(MSBuildProjectFullPath)"
              Targets="_BuildConfiguration"
-             Properties="Configuration=%(BuildConfigurations.Identity);ProductVersion=$(ProductVersion);AssemblyVersion=$(AssemblyVersion)"/>
+             Properties="Configuration=%(BuildConfigurations.Identity);Platform=Any CPU;ProductVersion=$(ProductVersion);AssemblyVersion=$(AssemblyVersion)"/>
   </Target>
   
   <!--
@@ -170,15 +167,29 @@
     <ConfigurationOutputPath>$(OutputPath)\$(Configuration)</ConfigurationOutputPath>
     <VersionInfoPath>$(ConfigurationOutputPath)\VersionInfo.cs</VersionInfoPath>
   </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="System.Reflection.AssemblyConfigurationAttribute">
+      <_Parameter1>$(Configuration)</_Parameter1>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="System.Reflection.AssemblyFileVersionAttribute">
+      <_Parameter1>$(ProductVersion)</_Parameter1>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="System.Reflection.AssemblyInformationalVersionAttribute">
+      <_Parameter1>$(ProductVersion)</_Parameter1>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="System.Reflection.AssemblyVersionAttribute">
+      <_Parameter1>$(AssemblyVersion)</_Parameter1>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="ImaginaryRealities.Framework.SemanticVersionAttribute">
+      <_Parameter1>$(BuildVersion)</_Parameter1>
+    </AssemblyAttributes>
+  </ItemGroup>
   <Target Name="_GenerateVersionInfo">
     <MakeDir Directories="$(ConfigurationOutputPath)"
              Condition="!Exists('$(ConfigurationOutputPath)')"/>
-    <GenerateVersionInfo OutputPath="$(VersionInfoPath)"
-                         AssemblyConfiguration="$(Configuration)"
-                         AssemblyFileVersion="$(ProductVersion)"
-                         AssemblyInformationalVersion="$(ProductVersion)"
-                         AssemblyVersion="$(ProductVersion)"
-                         SemanticVersion="$(BuildVersion)"/>
+    <WriteCodeFragment OutputFile="$(VersionInfoPath)"
+                       Language="C#"
+                       AssemblyAttributes="@(AssemblyAttributes)"/>
   </Target>
 
   <!--

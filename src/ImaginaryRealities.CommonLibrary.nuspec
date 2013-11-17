@@ -2,12 +2,39 @@
 <package>
   <metadata>
     <id>ImaginaryRealities.CommonLibrary</id>
-    <version>1.0.0</version>
+    <version>2.0.1</version>
     <title>ImaginaryRealities Common Library</title>
     <authors>ImaginaryRealities, LLC</authors>
     <owners>ImaginaryRealities, LLC</owners>
     <description>The Common Library contains classes and components that are reused often by ImaginaryRealities for developing our software products.</description>
-    <releaseNotes>Initial release of the Common Library.</releaseNotes>
+    <releaseNotes>
+        Version 2.0.1
+
+        I removed the strong naming key from the framework assemblies.
+        I reviewed the pros and cons of strong naming and decided that
+        it doesn't fit in with the intended use of the framework and
+        that the benefits to strong naming were non-existent.
+
+        I changed the implementation of the Process Monitor integration
+        code. The code now uses .NET safe handles instead of raw
+        handles which should lead to less risk of handle leaks
+        (although there was no evidence to suggest that there was a
+        problem before; I just decided it was a better practice). I
+        also fixed/updated some of the unit tests and increased code
+        coverage.
+
+        I created the ProcessMonitorException class. Exceptions that
+        are reported by the Process Monitor framework will throw this
+        exception instead of raw Exception objects.
+
+        I updated the SemanticVersionNumber class to use version 2.0.0
+        of the Semantic Versioning Specification. The big change here
+        is that the build number is no longer considered when comparing
+        version numbers. Also, the algorithm for comparing pre-release
+        version numbers was altered to match a change in the
+        specification. Pre-release identifiers that are numbers have a
+        lower precedence than alphanumeric identifiers.
+    </releaseNotes>
     <summary>Classes and components that implement common behavior.</summary>
     <language>en-us</language>
     <projectUrl>http://imaginaryrealities.github.com/CommonLibrary</projectUrl>
@@ -32,6 +59,6 @@
     <file src="CommonLibrary.Net45\bin\Release\ImaginaryRealities.Framework.xml" target="lib\net45"/>
     <file src="CommonLibrary.Net45\bin\Release\CodeContracts\ImaginaryRealities.Framework.Contracts.dll" target="lib\net45\CodeContracts"/>
     <file src="CommonLibrary.Net45\bin\Release\en-US\ImaginaryRealities.Framework.resources.dll" target="lib\net45\en-US"/>
-    <file src="CommonLibrary.Net40\*.cs" target="src"/>
+    <file src="CommonLibrary.Net40\**\*.cs" target="src"/>
   </files>
 </package>
