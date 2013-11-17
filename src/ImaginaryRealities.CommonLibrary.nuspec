@@ -2,13 +2,13 @@
 <package>
   <metadata>
     <id>ImaginaryRealities.CommonLibrary</id>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <title>ImaginaryRealities Common Library</title>
     <authors>ImaginaryRealities, LLC</authors>
     <owners>ImaginaryRealities, LLC</owners>
     <description>The Common Library contains classes and components that are reused often by ImaginaryRealities for developing our software products.</description>
     <releaseNotes>
-        Version 2.0.0
+        Version 2.0.1
 
         I removed the strong naming key from the framework assemblies.
         I reviewed the pros and cons of strong naming and decided that
@@ -59,6 +59,6 @@
     <file src="CommonLibrary.Net45\bin\Release\ImaginaryRealities.Framework.xml" target="lib\net45"/>
     <file src="CommonLibrary.Net45\bin\Release\CodeContracts\ImaginaryRealities.Framework.Contracts.dll" target="lib\net45\CodeContracts"/>
     <file src="CommonLibrary.Net45\bin\Release\en-US\ImaginaryRealities.Framework.resources.dll" target="lib\net45\en-US"/>
-    <file src="CommonLibrary.Net40\*.cs" target="src"/>
+    <file src="CommonLibrary.Net40\**\*.cs" target="src"/>
   </files>
 </package>
