@@ -30,6 +30,7 @@
 namespace ImaginaryRealities.Framework.UnitTests
 {
     using System;
+    using System.Diagnostics;
 
     using Xunit;
 
@@ -262,17 +263,12 @@ namespace ImaginaryRealities.Framework.UnitTests
         {
             var version1 = new SemanticVersionNumber("1.0.0-alpha");
             var version2 = new SemanticVersionNumber("1.0.0-alpha.1");
-            var version3 = new SemanticVersionNumber("1.0.0-beta.2");
-            var version4 = new SemanticVersionNumber("1.0.0-beta.11");
-            var version5 = new SemanticVersionNumber("1.0.0-rc.1");
-            var version6 = new SemanticVersionNumber("1.0.0-rc.1+build.1");
-            var version7 = new SemanticVersionNumber("1.0.0");
-            var version8 = new SemanticVersionNumber("1.0.0+0.3.7");
-            var version9 = new SemanticVersionNumber("1.3.7+build");
-            var version10 = new SemanticVersionNumber("1.3.7+build.2.b8f12d7");
-            var version11 = new SemanticVersionNumber("1.3.7+build.11.e0f985a");
-            var version12 = new SemanticVersionNumber("1.0.0-beta");
-            var version13 = new SemanticVersionNumber("1.0.0+0.3");
+            var version3 = new SemanticVersionNumber("1.0.0-alpha.beta");
+            var version4 = new SemanticVersionNumber("1.0.0-beta");
+            var version5 = new SemanticVersionNumber("1.0.0-beta.2");
+            var version6 = new SemanticVersionNumber("1.0.0-beta.11");
+            var version7 = new SemanticVersionNumber("1.0.0-rc.1");
+            var version8 = new SemanticVersionNumber("1.0.0");
             Assert.True(version1 < version2);
             Assert.True(version2 < version3);
             Assert.True(version3 < version4);
@@ -280,12 +276,8 @@ namespace ImaginaryRealities.Framework.UnitTests
             Assert.True(version5 < version6);
             Assert.True(version6 < version7);
             Assert.True(version7 < version8);
-            Assert.True(version8 < version9);
-            Assert.True(version9 < version10);
-            Assert.True(version10 < version11);
-            Assert.True(version4 > version12);
-            Assert.True(version8 > version7);
-            Assert.True(version8 > version13);
+            Assert.True(version2 > version1);
+            Assert.True(version3 > version2);
         }
 
         /// <summary>
@@ -329,6 +321,22 @@ namespace ImaginaryRealities.Framework.UnitTests
             Assert.Throws<ArgumentNullException>(() => version1.CompareTo(version2));
 
             // ReSharper restore ExpressionIsAlwaysNull
+        }
+
+        [Fact]
+        public static void CompareToCastsObjectsCorrectly()
+        {
+            var version1 = new SemanticVersionNumber(1, 0, 0);
+            object version2 = new SemanticVersionNumber(1, 0, 0);
+            Assert.Equal(0, version1.CompareTo(version2));
+        }
+
+        [Fact]
+        public static void HashCodeIsSameForIdenticalVersionNumbers()
+        {
+            var version1 = new SemanticVersionNumber("1.0.0-alpha+build.23");
+            var version2 = new SemanticVersionNumber("1.0.0-alpha+build.23");
+            Assert.Equal(version1.GetHashCode(), version2.GetHashCode());
         }
     }
 }

@@ -27,6 +27,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessMonitor"/> class.
         /// </summary>
+        [ExcludeFromCodeCoverage]
         public ProcessMonitor()
             : this(new WindowsApiWrapper())
         {

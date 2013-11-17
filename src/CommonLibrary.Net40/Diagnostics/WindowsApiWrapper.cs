@@ -7,10 +7,12 @@
 namespace ImaginaryRealities.Framework.Diagnostics
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Runtime.InteropServices;
 
     using Microsoft.Win32.SafeHandles;
 
+    [ExcludeFromCodeCoverage]
     internal class WindowsApiWrapper : IWindowsApi
     {
         public SafeFileHandle CreateFile(

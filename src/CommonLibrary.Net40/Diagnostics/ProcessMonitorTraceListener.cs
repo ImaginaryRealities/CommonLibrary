@@ -8,6 +8,7 @@
 namespace ImaginaryRealities.Framework.Diagnostics
 {
     using System.Diagnostics;
+    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// Trace listener class that will write trace messages to the Process
@@ -22,6 +23,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessMonitorTraceListener"/> class.
         /// </summary>
+        [ExcludeFromCodeCoverage]
         public ProcessMonitorTraceListener()
         {
             this.processMonitor = new ProcessMonitor();
