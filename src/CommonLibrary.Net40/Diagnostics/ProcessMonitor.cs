@@ -11,14 +11,14 @@ namespace ImaginaryRealities.Framework.Diagnostics
     using System.Globalization;
     using System.Runtime.InteropServices;
 
+    using Microsoft.Win32.SafeHandles;
+
     /// <summary>
     /// Allows the program to write trace messages to the Process Monitor log.
     /// </summary>
     public class ProcessMonitor : IProcessMonitor
     {
-        private static readonly IntPtr InvalidHandleValue = new IntPtr(-1);
-
-        private readonly IntPtr handle;
+        private readonly SafeFileHandle handle;
         private readonly IWindowsApi windowsApi;
 
         private bool disposed;
@@ -38,7 +38,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
             this.windowsApi = windowsApi;
             this.handle = windowsApi.CreateFile(
                 "\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero);
-            if (InvalidHandleValue != this.handle)
+            if (!this.handle.IsInvalid)
             {
                 return;
             }
@@ -132,13 +132,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
                 return;
             }
 
-            if (!this.windowsApi.CloseHandle(this.handle))
-            {
-                var message = string.Format(
-                    CultureInfo.CurrentCulture, "CloseHandle returned {0}", this.windowsApi.GetLastError());
-                throw new Exception(message);
-            }
-
+            this.handle.Dispose();
             if (!disposing)
             {
                 return;

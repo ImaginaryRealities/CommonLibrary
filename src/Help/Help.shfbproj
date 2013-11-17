@@ -26,7 +26,8 @@
     <HelpAttributes />
     <NamespaceSummaries>
       <NamespaceSummaryItem name="(global)" isDocumented="False" />
-<NamespaceSummaryItem name="ImaginaryRealities.Framework" isDocumented="True">Base components and classes that provide common core functionality and behavior for applications.</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="ImaginaryRealities.Framework" isDocumented="True">Base components and classes that provide common core functionality and behavior for applications.</NamespaceSummaryItem>
+    </NamespaceSummaries>
     <PlugInConfigurations />
     <BuildLogFile />
     <HtmlHelp1xCompilerPath />

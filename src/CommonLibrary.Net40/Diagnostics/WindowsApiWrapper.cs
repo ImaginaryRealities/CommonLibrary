@@ -9,14 +9,11 @@ namespace ImaginaryRealities.Framework.Diagnostics
     using System;
     using System.Runtime.InteropServices;
 
+    using Microsoft.Win32.SafeHandles;
+
     internal class WindowsApiWrapper : IWindowsApi
     {
-        public bool CloseHandle(IntPtr handle)
-        {
-            return NativeMethods.CloseHandle(handle);
-        }
-
-        public IntPtr CreateFile(
+        public SafeFileHandle CreateFile(
             string fileName,
             uint desiredAccess,
             uint shareMode,
@@ -36,7 +33,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
         }
 
         public bool DeviceIoControl(
-            IntPtr deviceHandle,
+            SafeFileHandle deviceHandle,
             uint controlCode,
             IntPtr inBuffer,
             uint inBufferSize,

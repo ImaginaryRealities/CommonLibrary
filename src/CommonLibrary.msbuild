@@ -39,7 +39,7 @@
     <BuildPackage>true</BuildPackage>
     <PackageOutputDir>$(OutputPath)\NuGet</PackageOutputDir>
     <ProjectPath>$(MSBuildProjectDirectory)\ImaginaryRealities.CommonLibrary.nuspec</ProjectPath>
-    <BuildVersion Condition="'$(BuildVersion)'==''">1.0.0</BuildVersion>
+    <BuildVersion Condition="'$(BuildVersion)'==''">2.0.0</BuildVersion>
     <Configuration>Release</Configuration>
   </PropertyGroup>
 
@@ -55,7 +55,7 @@
              AssemblyFile="packages\ImaginaryRealities.MSBuildExtensions.1.0.0\tools\ImaginaryRealities.MSBuild.dll"/>
 
   <UsingTask TaskName="Xunit.Runner.MSBuild.xunit"
-             AssemblyFile="packages\xunit.runners.1.9.1\tools\xunit.runner.msbuild.dll"/>
+             AssemblyFile="packages\xunit.runners.1.9.2\tools\xunit.runner.msbuild.dll"/>
   
   <!--
   
@@ -142,7 +142,7 @@
   <Target Name="_BuildAllConfigurations">
     <MSBuild Projects="$(MSBuildProjectFullPath)"
              Targets="_BuildConfiguration"
-             Properties="Configuration=%(BuildConfigurations.Identity);ProductVersion=$(ProductVersion);AssemblyVersion=$(AssemblyVersion)"/>
+             Properties="Configuration=%(BuildConfigurations.Identity);Platform=Any CPU;ProductVersion=$(ProductVersion);AssemblyVersion=$(AssemblyVersion)"/>
   </Target>
   
   <!--

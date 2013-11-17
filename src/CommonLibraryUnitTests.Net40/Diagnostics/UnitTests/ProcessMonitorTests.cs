@@ -10,6 +10,8 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
     using System.Globalization;
     using System.Runtime.InteropServices;
 
+    using Microsoft.Win32.SafeHandles;
+
     using Moq;
 
     using Xunit;
@@ -23,7 +25,7 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
             mockWindowsApi.Setup(
                 x =>
                 x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
-                .Returns(new IntPtr(10))
+                .Returns(new SafeFileHandle(new IntPtr(10), false))
                 .Verifiable();
             new ProcessMonitor(mockWindowsApi.Object);
             mockWindowsApi.VerifyAll();
@@ -36,7 +38,7 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
             mockWindowsApi.Setup(
                 x =>
                 x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
-                .Returns(new IntPtr(-1));
+                .Returns(new SafeFileHandle(new IntPtr(-1), false));
             mockWindowsApi.Setup(x => x.GetLastError()).Returns(5);
             var exception = Assert.Throws<Exception>(() => new ProcessMonitor(mockWindowsApi.Object));
             Assert.Equal("CreateFile returned 5", exception.Message);
@@ -49,8 +51,7 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
             mockWindowsApi.Setup(
                 x =>
                 x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
-                .Returns(new IntPtr(5));
-            mockWindowsApi.Setup(x => x.CloseHandle(new IntPtr(5))).Returns(true).Verifiable();
+                .Returns(new SafeFileHandle(new IntPtr(5), false));
             using (new ProcessMonitor(mockWindowsApi.Object))
             {
             }
@@ -59,35 +60,14 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
         }
 
         [Fact]
-        public void DisposeThrowsExceptionIfCloseHandleFails()
-        {
-            var mockWindowsApi = new Mock<IWindowsApi>(MockBehavior.Strict);
-            mockWindowsApi.Setup(
-                x =>
-                x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
-                .Returns(new IntPtr(5));
-            mockWindowsApi.Setup(x => x.CloseHandle(new IntPtr(5))).Returns(false);
-            mockWindowsApi.Setup(x => x.GetLastError()).Returns(2);
-            var exception = Assert.Throws<Exception>(
-                () =>
-                    {
-                        using (new ProcessMonitor(mockWindowsApi.Object))
-                        {
-                        }
-                    });
-            Assert.Equal("CloseHandle returned 2", exception.Message);
-        }
-
-        [Fact]
         public void WriteMessageSendsMessageToProcessMonitor()
         {
             var mockWindowsApi = new Mock<IWindowsApi>(MockBehavior.Strict);
-            var deviceHandle = new IntPtr(5);
+            var deviceHandle = new SafeFileHandle(new IntPtr(5), false);
             mockWindowsApi.Setup(
                 x =>
                 x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
                 .Returns(deviceHandle);
-            mockWindowsApi.Setup(x => x.CloseHandle(deviceHandle)).Returns(true).Verifiable();
             uint bytesReturned;
             mockWindowsApi.Setup(
                 x =>
@@ -112,12 +92,11 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
         public void WriteMessageThrowsExceptionIfDeviceIoControlFails()
         {
             var mockWindowsApi = new Mock<IWindowsApi>(MockBehavior.Strict);
-            var deviceHandle = new IntPtr(5);
+            var deviceHandle = new SafeFileHandle(new IntPtr(5), false);
             mockWindowsApi.Setup(
                 x =>
                 x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
                 .Returns(deviceHandle);
-            mockWindowsApi.Setup(x => x.CloseHandle(deviceHandle)).Returns(true).Verifiable();
             uint bytesReturned;
             mockWindowsApi.Setup(
                 x =>
@@ -141,12 +120,11 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
         public void WriteMessageFormatsMessageAndWritesMessageToDevice()
         {
             var mockWindowsApi = new Mock<IWindowsApi>(MockBehavior.Strict);
-            var deviceHandle = new IntPtr(5);
+            var deviceHandle = new SafeFileHandle(new IntPtr(5), false);
             mockWindowsApi.Setup(
                 x =>
                 x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
                 .Returns(deviceHandle);
-            mockWindowsApi.Setup(x => x.CloseHandle(deviceHandle)).Returns(true).Verifiable();
             uint bytesReturned;
             mockWindowsApi.Setup(
                 x =>

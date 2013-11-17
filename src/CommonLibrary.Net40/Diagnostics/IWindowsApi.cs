@@ -8,6 +8,8 @@ namespace ImaginaryRealities.Framework.Diagnostics
 {
     using System;
 
+    using Microsoft.Win32.SafeHandles;
+
     /// <summary>
     /// Abstracts the Win32 API functions used for supporting integration
     /// with Process Monitor for mocking and unit testing.
@@ -15,18 +17,6 @@ namespace ImaginaryRealities.Framework.Diagnostics
     [CLSCompliant(false)]
     public interface IWindowsApi
     {
-        /// <summary>
-        /// Closes an open handle.
-        /// </summary>
-        /// <param name="handle">
-        /// The handle to the object.
-        /// </param>
-        /// <returns>
-        /// True if the handle was successfully closed, or false if the
-        /// operation failed.
-        /// </returns>
-        bool CloseHandle(IntPtr handle);
-
         /// <summary>
         /// Creates or opens a file or I/O device.
         /// </summary>
@@ -55,7 +45,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// <returns>
         /// The handle of the file or device, or -1 if an error occurred.
         /// </returns>
-        IntPtr CreateFile(
+        SafeFileHandle CreateFile(
             string fileName,
             uint desiredAccess,
             uint shareMode,
@@ -100,7 +90,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// True if the operation succeeded, or false if the operation failed.
         /// </returns>
         bool DeviceIoControl(
-            IntPtr deviceHandle,
+            SafeFileHandle deviceHandle,
             uint controlCode,
             IntPtr inBuffer,
             uint inBufferSize,
