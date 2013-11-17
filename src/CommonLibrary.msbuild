@@ -39,7 +39,7 @@
     <BuildPackage>true</BuildPackage>
     <PackageOutputDir>$(OutputPath)\NuGet</PackageOutputDir>
     <ProjectPath>$(MSBuildProjectDirectory)\ImaginaryRealities.CommonLibrary.nuspec</ProjectPath>
-    <BuildVersion Condition="'$(BuildVersion)'==''">2.0.0</BuildVersion>
+    <BuildVersion Condition="'$(BuildVersion)'==''">2.0.1</BuildVersion>
     <Configuration>Release</Configuration>
   </PropertyGroup>
 
@@ -78,7 +78,7 @@
   <Target Name="Clean">
     <MSBuild Projects="$(SolutionPath)"
              Targets="Clean"
-             Properties="Configuration=%(BuildConfigurations.Identity)"/>
+             Properties="Configuration=%(BuildConfigurations.Identity);Platform=Any CPU"/>
     <RemoveDir Directories="$(OutputPath)"/> 
     <RemoveDir Directories="src\packages"/> 
   </Target>
