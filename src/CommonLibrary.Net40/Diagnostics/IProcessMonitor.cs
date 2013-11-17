@@ -7,11 +7,13 @@
 namespace ImaginaryRealities.Framework.Diagnostics
 {
     using System;
+    using System.Diagnostics.Contracts;
 
     /// <summary>
     /// Abstracts the <see cref="ProcessMonitor"/> API to support mocking and
     /// unit testing.
     /// </summary>
+    [ContractClass(typeof(ProcessMonitorContracts))]
     public interface IProcessMonitor : IDisposable
     {
         /// <summary>

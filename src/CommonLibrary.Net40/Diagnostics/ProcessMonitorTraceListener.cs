@@ -22,8 +22,9 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessMonitorTraceListener"/> class.
         /// </summary>
-        public ProcessMonitorTraceListener() : this(new ProcessMonitor())
+        public ProcessMonitorTraceListener()
         {
+            this.processMonitor = new ProcessMonitor();
         }
 
         internal ProcessMonitorTraceListener(IProcessMonitor processMonitor)

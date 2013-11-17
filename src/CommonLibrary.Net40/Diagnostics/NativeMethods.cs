@@ -26,6 +26,7 @@ namespace ImaginaryRealities.Framework.Diagnostics
 
         [DllImport("kernel32.dll", CallingConvention = CallingConvention.Winapi, EntryPoint = "DeviceIoControl",
             ExactSpelling = true, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
         internal static extern bool DeviceIoControl(
             SafeFileHandle handle,
             uint controlCode,

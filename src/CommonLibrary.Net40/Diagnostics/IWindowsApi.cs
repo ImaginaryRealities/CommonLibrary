@@ -7,6 +7,7 @@
 namespace ImaginaryRealities.Framework.Diagnostics
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
 
     using Microsoft.Win32.SafeHandles;
 
@@ -45,6 +46,8 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// <returns>
         /// The handle of the file or device, or -1 if an error occurred.
         /// </returns>
+        [SuppressMessage("Microsoft.Naming", "CA1726:UsePreferredTerms", MessageId = "flags",
+            Justification = "MFC3: flagsAndAttributes matches the native API.")]
         SafeFileHandle CreateFile(
             string fileName,
             uint desiredAccess,
@@ -89,6 +92,10 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// <returns>
         /// True if the operation succeeded, or false if the operation failed.
         /// </returns>
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "6#",
+            Justification = "MFC3: The DeviceIoControl native API defines the out parameter.")]
+        [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Io",
+            Justification = "MFC3: DeviceIoControl matches the name of the native API.")]
         bool DeviceIoControl(
             SafeFileHandle deviceHandle,
             uint controlCode,
@@ -105,6 +112,8 @@ namespace ImaginaryRealities.Framework.Diagnostics
         /// <returns>
         /// The error from the last Win32 API call.
         /// </returns>
+        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate",
+            Justification = "MFC3: GetLastError is the name of a native API.")]
         int GetLastError();
     }
 }

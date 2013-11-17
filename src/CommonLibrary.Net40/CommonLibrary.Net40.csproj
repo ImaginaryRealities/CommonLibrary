@@ -128,6 +128,8 @@
     <Compile Include="Diagnostics\IWindowsApi.cs" />
     <Compile Include="Diagnostics\NativeMethods.cs" />
     <Compile Include="Diagnostics\ProcessMonitor.cs" />
+    <Compile Include="Diagnostics\ProcessMonitorContracts.cs" />
+    <Compile Include="Diagnostics\ProcessMonitorException.cs" />
     <Compile Include="Diagnostics\ProcessMonitorTraceListener.cs" />
     <Compile Include="Diagnostics\WindowsApiWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +150,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SemanticVersionNumberResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
+      <Link>CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

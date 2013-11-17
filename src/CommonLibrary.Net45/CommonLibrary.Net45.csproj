@@ -137,6 +137,12 @@
     <Compile Include="..\CommonLibrary.Net40\Diagnostics\ProcessMonitor.cs">
       <Link>Diagnostics\ProcessMonitor.cs</Link>
     </Compile>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\ProcessMonitorContracts.cs">
+      <Link>Diagnostics\ProcessMonitorContracts.cs</Link>
+    </Compile>
+    <Compile Include="..\CommonLibrary.Net40\Diagnostics\ProcessMonitorException.cs">
+      <Link>Diagnostics\ProcessMonitorException.cs</Link>
+    </Compile>
     <Compile Include="..\CommonLibrary.Net40\Diagnostics\ProcessMonitorTraceListener.cs">
       <Link>Diagnostics\ProcessMonitorTraceListener.cs</Link>
     </Compile>
@@ -166,6 +172,11 @@
     <EmbeddedResource Include="..\CommonLibrary.Net40\SemanticVersionNumberResources.resx">
       <Link>SemanticVersionNumberResources.resx</Link>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
+      <Link>CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -40,7 +40,7 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
                 x.CreateFile("\\\\.\\Global\\ProcmonDebugLogger", 0xC0000000U, 7U, IntPtr.Zero, 3U, 0x80U, IntPtr.Zero))
                 .Returns(new SafeFileHandle(new IntPtr(-1), false));
             mockWindowsApi.Setup(x => x.GetLastError()).Returns(5);
-            var exception = Assert.Throws<Exception>(() => new ProcessMonitor(mockWindowsApi.Object));
+            var exception = Assert.Throws<ProcessMonitorException>(() => new ProcessMonitor(mockWindowsApi.Object));
             Assert.Equal("CreateFile returned 5", exception.Message);
         }
 
@@ -105,7 +105,7 @@ namespace ImaginaryRealities.Framework.Diagnostics.UnitTests
                 .Returns(false)
                 .Verifiable();
             mockWindowsApi.Setup(x => x.GetLastError()).Returns(2);
-            var exception = Assert.Throws<Exception>(
+            var exception = Assert.Throws<ProcessMonitorException>(
                 () =>
                     {
                         using (var processMonitor = new ProcessMonitor(mockWindowsApi.Object))
